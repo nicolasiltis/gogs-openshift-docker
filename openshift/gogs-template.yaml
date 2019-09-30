@@ -130,7 +130,10 @@ objects:
     labels:
       app: ${APPLICATION_NAME}
     name: ${APPLICATION_NAME}
-  spec:
+  spec:  
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: edge
     host: ${HOSTNAME}
     to:
       name: ${APPLICATION_NAME}
